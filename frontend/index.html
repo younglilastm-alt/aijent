@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini App UI</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        #wallet-connect { margin-bottom: 20px; }
+        #rule-builder { border: 1px solid #ccc; padding: 10px; }
+    </style>
+</head>
+<body>
+    <div id="wallet-connect">
+        <h2>Connect Your Wallet</h2>
+        <button onclick="connectWallet()">Connect Wallet</button>
+        <div id="wallet-status"></div>
+    </div>
+    <div id="rule-builder">
+        <h2>Rule Builder</h2>
+        <textarea id="rule-input" rows="4" cols="50" placeholder="Input your rules here..."></textarea><br>
+        <button onclick="saveRule()">Save Rule</button>
+    </div>
+    <script>
+        function connectWallet() {
+            document.getElementById('wallet-status').innerText = 'Wallet connected!';
+        }
+        function saveRule() {
+            const rule = document.getElementById('rule-input').value;
+            alert('Rule saved: ' + rule);
+        }
+    </script>
+</body>
+</html>
